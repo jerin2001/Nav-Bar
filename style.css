@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital@1&display=swap");
+/* reset values */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Serif 4", sans-serif;
+}
+.container {
+  /* background-image: url(https://th.bing.com/th/id/R.86964089209eb1706457d1f5c97f0a79?rik=%2fZzqlAg6zLAJJw&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f05%2fColorful-Gradient-Desktop-Wallpaper.jpeg&ehk=EL%2bvRT%2fDuG6aSBnQrrWhj%2bIGipGfL%2fo%2fQVGGeR6uejQ%3d&risl=&pid=ImgRaw&r=0); */
+  width: 100%;
+  height: 400px;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+}
+.nav-container {
+  background: -webkit-linear-gradient(360deg, #e9fbcf 10%, #1d7d8e 360%);
+  background: linear-gradient(360deg, #e9fbcf 10%, #1d7d8e 360%);
+  height: 15vh;
+  box-shadow: 0px 3px 5px 1px grey;
+}
+nav {
+  /* background-color: crimson; */
+  width: 95%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  height: 12vh;
+  margin-top: 2vh;
+}
+.logo img {
+  height: 100%;
+  clip-path: circle(47%);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: space-evenly;
+}
+
+.nav-links li:hover {
+  transform: scale(1.4);
+  transition: transform 0.6s;
+}
+.arrow {
+  height: 4vh;
+  width: 30px;
+  transform: translateY(100%);
+  display: none;
+}
+.line1,
+.line2,
+.line3 {
+  width: 100%;
+  height: 25%;
+  background-color: blanchedalmond;
+  margin-top: 2px;
+  border-radius: 2px;
+}
+@media screen and (max-width: 840px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 444px) {
+  .nav-links {
+    /* display: none; */
+    background: -webkit-linear-gradient(
+      360deg,
+      #38aecc 10%,
+      #347fb9 360%
+    ); /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(
+      360deg,
+      #38aecc 10%,
+      #347fb9 360%
+    ); /* FF3.6+ */
+    background: linear-gradient(360deg, #38aecc 10%, #347fb9 360%); /* W3C */
+    position: fixed;
+    top: 15vh;
+    right: 0;
+    flex-direction: column;
+    height: 85vh;
+    width: 80%;
+    transform: translateX(100%);
+    transition: transform 0.6s;
+  }
+  .arrow {
+    display: block;
+  }
+  .display {
+    transform: translateX(0%);
+  }
+}
+.toggle2 {
+  display: none;
+}
+.toggle1 {
+  transform: rotate(45deg) translate(6px, 6px);
+  transition: transform 0.8s;
+}
+.toggle3 {
+  transform: rotate(-45deg);
+  transition: transform 0.8s;
+}
